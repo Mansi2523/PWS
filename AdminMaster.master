@@ -1,0 +1,338 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Admin1_AdminMaster" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Admin</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <meta http-equiv="Page-Enter" content="blendTrans(Duration=0)" />
+    <meta http-equiv="Page-Exit" content="blendTrans(Duration=0)" />
+    <!--No Caching-->
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- Include the fonts. -->
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,300,300italic,400italic,700,700italic&subset=latin,vietnamese,latin-ext,cyrillic,cyrillic-ext,greek-ext,greek' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic&subset=latin,vietnamese,latin-ext,cyrillic,cyrillic-ext,greek-ext,greek' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,greek,greek-ext,vietnamese,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/morris/morris.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css" />
+    <link href="assets/pages/css/lock.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/jstree/dist/themes/default/style.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/jquery-notific8/jquery.notific8.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap-colorpicker/css/colorpicker.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/jquery-minicolors/jquery.minicolors.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/typeahead/typeahead.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/ladda/ladda-themeless.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/jquery-file-upload/css/jquery.fileupload.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/jquery-file-upload/css/jquery.fileupload-ui.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/nouislider/nouislider.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/nouislider/nouislider.pips.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/icheck/skins/all.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap-summernote/summernote.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/apps/css/inbox.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/clockface/css/clockface.css" rel="stylesheet" type="text/css" />
+    <!-- END THEME GLOBAL STYLES -->
+    <!-- BEGIN THEME LAYOUT STYLES -->
+    <link href="assets/global/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css" rel="stylesheet" type="text/css" />
+    <link href="assets/global/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+    <link href="assets/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/layouts/layout/css/themes/blue.min.css" rel="stylesheet" type="text/css" id="style_color">
+    <%--For Notificatrion--%>
+    <link href="assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <link href="assets/pages/css/CustomMaster.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white ">
+    <form runat="server" id="Form1" autocomplete="off" name="Form1" novalidate>
+        <asp:HiddenField ID="hdnimagepath" runat="server" Value="0" />
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
+        <!-- BEGIN HEADER -->
+        <asp:HiddenField runat="server" ID="hfUserID" />
+        <asp:HiddenField runat="server" ID="hdnURL" />
+        <asp:HiddenField runat="server" ID="hdnMainMenuiD" />
+        <asp:HiddenField runat="server" ID="hdnSubMenuID" />
+        <asp:HiddenField runat="server" ID="hdnChildMenuID" />
+        <asp:HiddenField runat="server" ID="txtc" />
+        <asp:HiddenField runat="server" ID="hdnAction" />
+        <div id="toast-container" class="toast-top-right" aria-live="polite" role="alert">
+            <div class="toast " id="tstiner">
+                <button class="toast-close-button" role="button">×</button><div class="toast-title" id="tsttitle"></div>
+                <div class="toast-message" id="tstdesc"></div>
+            </div>
+        </div>
+        <!-- END HEADER -->
+        <!-- BEGIN HEADER & CONTENT DIVIDER -->
+        <div class="clearfix"></div>
+        <div class="page-container">
+
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content" style="min-height: 700px !important;">
+                    <!-- BEGIN PAGE HEADER-->
+                    <div>
+                        <!-- BEGIN PAGE BAR -->
+                        <div class="page-bar">
+                            <ul class="page-breadcrumb">
+                                <li>
+                                    <asp:Label runat="server" ID="PageTitle"></asp:Label>
+                                </li>
+                                <li runat="server" id="lvlli1" style="display: none">
+                                    <i class="fa fa-circle"></i>
+                                    <asp:Label runat="server" ID="level1"></asp:Label>
+
+                                </li>
+                                <li runat="server" id="lvlli2" style="display: none">
+                                    <i class="fa fa-circle"></i>
+                                    <asp:Label runat="server" ID="level2"></asp:Label>
+
+                                </li>
+
+                                <li runat="server" id="lvlli3" style="display: none">
+                                    <i class="fa fa-circle"></i>
+                                    <asp:Label runat="server" ID="level3"></asp:Label>
+                                </li>
+                                <li id="Li1" style="display: none">
+                                    <asp:Panel runat="server" ID="pbllvl4" Visible="false">
+                                        <i class="fa fa-circle"></i>
+                                        <asp:Label runat="server" ID="level4"></asp:Label>
+                                    </asp:Panel>
+                                </li>
+                            </ul>
+                            <div class="page-toolbar">
+                                <asp:LinkButton runat="server" ID="lnkrefreshpage" OnClick="lnkrefresh_Click" CssClass="btn grey-mint btn-outline noborder"><i class="fa fa-refresh"></i> Refresh</asp:LinkButton>
+                            </div>
+                        </div>
+                        <!-- END PAGE BAR -->
+                        <!-- BEGIN PAGE TITLE-->
+                        <!-- END PAGE BAR -->
+                        <!-- BEGIN PAGE TITLE-->
+                        <h3 class="page-title"></h3>
+                        <!-- END PAGE TITLE-->
+                        <!-- END PAGE HEADER-->
+                        <div class="clearfix"></div>
+                        <script type="text/javascript">
+                            //Action Triggered Successfully
+                            var _0x6a49 = ["\x73\x68\x6F\x77", "\x23\x64\x69\x76\x61\x74\x73", "\x23\x61\x74\x73", "\x64\x69\x73\x70\x6C\x61\x79\x2D\x68\x69\x64\x65", "\x72\x65\x6D\x6F\x76\x65\x43\x6C\x61\x73\x73", "\x66\x61\x64\x65\x4F\x75\x74", "\x23\x64\x61\x73", "\x23\x64\x75\x73", "\x23\x64\x64\x73", "\x23\x6D\x73\x73"]; function ATS() { $(_0x6a49[1])[_0x6a49[0]](); $(_0x6a49[2])[_0x6a49[0]](); $(_0x6a49[2])[_0x6a49[4]](_0x6a49[3]); setTimeout(function () { $(_0x6a49[1])[_0x6a49[5]](); $(_0x6a49[2])[_0x6a49[5]]() }, 3000) } function DAS() { $(_0x6a49[1])[_0x6a49[0]](); $(_0x6a49[6])[_0x6a49[0]](); $(_0x6a49[6])[_0x6a49[4]](_0x6a49[3]); setTimeout(function () { $(_0x6a49[1])[_0x6a49[5]](); $(_0x6a49[6])[_0x6a49[5]]() }, 3000) } function DUS() { $(_0x6a49[1])[_0x6a49[0]](); $(_0x6a49[7])[_0x6a49[0]](); $(_0x6a49[7])[_0x6a49[4]](_0x6a49[3]); setTimeout(function () { $(_0x6a49[1])[_0x6a49[5]](); $(_0x6a49[7])[_0x6a49[5]]() }, 3000) } function DDS() { $(_0x6a49[1])[_0x6a49[0]](); $(_0x6a49[8])[_0x6a49[0]](); $(_0x6a49[8])[_0x6a49[4]](_0x6a49[3]); setTimeout(function () { $(_0x6a49[1])[_0x6a49[5]](); $(_0x6a49[8])[_0x6a49[5]]() }, 3000) } function MSS() { $(_0x6a49[1])[_0x6a49[0]](); $(_0x6a49[9])[_0x6a49[0]](); $(_0x6a49[9])[_0x6a49[4]](_0x6a49[3]); setTimeout(function () { $(_0x6a49[1])[_0x6a49[5]](); $(_0x6a49[9])[_0x6a49[5]]() }, 3000) }
+                            //Data Added / Updated Course
+                            var _0x496c = ["\x73\x68\x6F\x77", "\x2E\x66\x61\x6E\x63\x79\x62\x6F\x78\x2D\x6F\x76\x65\x72\x6C\x61\x79", "\x66\x61\x64\x65\x49\x6E", "\x23\x53\x75\x63\x63\x65\x73\x73\x4D\x65\x73\x73\x61\x67\x65\x48\x69\x64\x65\x73\x68\x6F\x77", "\x64\x69\x73\x70\x6C\x61\x79\x2D\x68\x69\x64\x65", "\x72\x65\x6D\x6F\x76\x65\x43\x6C\x61\x73\x73", "\x66\x61\x64\x65\x4F\x75\x74", "\x6C\x6F\x63\x61\x74\x69\x6F\x6E", "\x4D\x61\x6E\x61\x67\x65\x43\x6F\x75\x72\x73\x65\x4D\x61\x73\x74\x65\x72\x2E\x61\x73\x70\x78", "\x41\x64\x64\x55\x6E\x69\x74\x2E\x61\x73\x70\x78", "\x23\x45\x72\x72\x6F\x72\x4D\x65\x73\x73\x61\x67\x65\x48\x69\x64\x65\x73\x68\x6F\x77", "\x68\x69\x64\x65", "\x61\x64\x64\x6C\x61\x73\x73"]; function SNEC() { $(_0x496c[1])[_0x496c[0]](); $(_0x496c[3])[_0x496c[2]](30); $(_0x496c[3])[_0x496c[5]](_0x496c[4]); setTimeout(function () { $(_0x496c[3])[_0x496c[6]](); window[_0x496c[7]] = _0x496c[8] }, 3000) } function SNCC() { $(_0x496c[1])[_0x496c[0]](); $(_0x496c[3])[_0x496c[2]](30); $(_0x496c[3])[_0x496c[5]](_0x496c[4]); setTimeout(function () { $(_0x496c[3])[_0x496c[6]](); window[_0x496c[7]] = _0x496c[9] }, 3000) } function ERR() { $(_0x496c[1])[_0x496c[0]](); $(_0x496c[10])[_0x496c[2]](30); $(_0x496c[10])[_0x496c[5]](_0x496c[4]); setTimeout(function () { $(_0x496c[1])[_0x496c[11]](); $(_0x496c[10])[_0x496c[6]](30); $(_0x496c[10])[_0x496c[12]](_0x496c[4]) }, 3000) }
+                        </script>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <div class="scroll-to-top" style="display: none !important;">
+                            <i class="fa fa-arrow-up"></i>
+                        </div>
+                        <a class="scroll-to-bottom">
+                            <i class="fa fa-arrow-down"></i>
+                        </a>
+                    </div>
+                    <!-- END CONTENT BODY -->
+                </div>
+                <!-- END CONTENT -->
+            </div>
+        </div>
+        <asp:Panel class="jquery-notific8-container top right" Style="z-index: 11500;" ID="divCustomessageOuter" runat="server" Visible="false">
+            <asp:Panel class="jquery-notific8-notification" ID="divCustomessageInner" Style="display: block;" runat="server">
+                <div class="jquery-notific8-close"><span>X</span></div>
+                <div class="jquery-notific8-message">
+                    <asp:Label runat="server" ID="lblmessage"></asp:Label>
+                </div>
+            </asp:Panel>
+        </asp:Panel>
+
+        <div id="divats">
+            <%--Student Active / Inactive --%>
+            <div class="jquery-notific8-notification teal" id="ats">
+                <div class="jquery-notific8-message">Action Triggered Successfully!</div>
+            </div>
+
+            <%--Student Active / Inactive --%>
+            <div class="jquery-notific8-notification teal" id="mss">
+                <div class="jquery-notific8-message">Mail Sent Successfully!</div>
+            </div>
+
+            <%--Student Active / Inactive --%>
+            <div class="jquery-notific8-notification teal" id="das">
+                <div class="jquery-notific8-message">Data Added Successfully!</div>
+            </div>
+
+            <%--Student Active / Inactive --%>
+            <div class="jquery-notific8-notification teal" id="dus">
+                <div class="jquery-notific8-message">Data Updated Successfully!</div>
+            </div>
+
+            <%--Student Active / Inactive --%>
+            <div class="jquery-notific8-notification teal" id="dds">
+                <div class="jquery-notific8-message">Data Deleted Successfully!</div>
+            </div>
+
+            <%--Success Message --%>
+            <div class="jquery-notific8-notification teal" id="SuccessMessageHideshow">
+                <div class="jquery-notific8-message">Action Triggered Successfully!</div>
+            </div>
+
+            <%--Error --%>
+            <div class="jquery-notific8-notification teal" id="ErrorMessageHideshow">
+                <div class="jquery-notific8-message">Something might cause error to trigger this action!</div>
+            </div>
+        </div>
+
+    </form>
+    <script type="text/javascript">
+        // Disable Right Click 
+        var _0xfb88 = ["\x6F\x6E\x63\x6F\x6E\x74\x65\x78\x74\x6D\x65\x6E\x75", "\x62\x75\x74\x74\x6F\x6E", "\x6D\x6F\x75\x73\x65\x64\x6F\x77\x6E", "\x72\x65\x61\x64\x79"]; $(document)[_0xfb88[3]](function () { $(document)[0][_0xfb88[0]] = function () { return false }; $(document)[_0xfb88[2]](function (_0xadfex1) { if (_0xadfex1[_0xfb88[1]] == 2) { return false } else { return true } }) })
+
+        // Disable F12 Button
+        var _0xa1c9 = ["\x6B\x65\x79\x43\x6F\x64\x65", "\x63\x74\x72\x6C\x4B\x65\x79", "\x73\x68\x69\x66\x74\x4B\x65\x79", "\x6B\x65\x79\x64\x6F\x77\x6E"]; $(document)[_0xa1c9[3]](function (_0xed7bx1) { if (_0xed7bx1[_0xa1c9[0]] == 123) { return false } else { if (_0xed7bx1[_0xa1c9[1]] && _0xed7bx1[_0xa1c9[2]] && _0xed7bx1[_0xa1c9[0]] == 73) { return false } } })
+
+        //Show List Area After 5 Second
+        var _0x6cfb = ["\x66\x61\x64\x65\x49\x6E", "\x64\x65\x6C\x61\x79", "\x2E\x64\x76\x6C\x73\x74", "\x72\x65\x61\x64\x79"]; $(document)[_0x6cfb[3]](function () { $(_0x6cfb[2])[_0x6cfb[1]](1000)[_0x6cfb[0]]() })
+
+    </script>
+    <script src="assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <%--<script src="assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>--%>
+    <script src="assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>    
+    <!-- END CORE PLUGINS -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="assets/global/plugins/highcharts/js/highcharts.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/highcharts/js/highcharts-3d.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/highcharts/js/highcharts-more.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/moment.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/clockface/js/clockface.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/morris/morris.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/morris/raphael-min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/counterup/jquery.waypoints.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/amcharts/amcharts/amcharts.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/amcharts/amcharts/serial.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/amcharts/amcharts/pie.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/amcharts/amcharts/radar.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/amcharts/amcharts/themes/light.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/amcharts/amcharts/themes/patterns.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/amcharts/amcharts/themes/chalk.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/amcharts/amstockcharts/amstock.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/fullcalendar/fullcalendar.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/fullcalendar/moment.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/flot/jquery.flot.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/flot/jquery.flot.resize.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/flot/jquery.flot.categories.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
+    <%--<script src="assets/global/scripts/datatable.js" type="text/javascript"></script>--%>
+    <script src="assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
+    <script src="//cdn.datatables.net/plug-ins/1.10.11/sorting/date-eu.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/jstree/dist/jstree.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/jquery-minicolors/jquery.minicolors.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-modal/js/bootstrap-modalmanager.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-modal/js/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/clockface/js/clockface.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/jquery-inputmask/jquery.inputmask.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/jquery.input-ip-address-control-1.0.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-confirmation/bootstrap-confirmation.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/typeahead/handlebars.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/typeahead/typeahead.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/ladda/spin.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/ladda/ladda.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/icheck/icheck.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-markdown/lib/markdown.js" type="text/javascript"></script>
+    <script src="./assets/global/plugins/bootstrap-markdown/js/bootstrap-markdown.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap-summernote/summernote.min.js" type="text/javascript"></script>
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL SCRIPTS -->
+    <script src="assets/global/scripts/app.min.js" type="text/javascript"></script>
+    <script src="assets/pages/scripts/dashboard.js" type="text/javascript"></script>
+    <!-- END THEME GLOBAL SCRIPTS -->
+     <script src="assets/pages/scripts/components-editors.js" type="text/javascript"></script>
+    <script src="assets/pages/scripts/form-icheck.min.js" type="text/javascript"></script>
+    <script src="assets/pages/scripts/components-bootstrap-select.min.js" type="text/javascript"></script>
+    <script src="assets/pages/scripts/ui-buttons.min.js" type="text/javascript"></script>
+    <script src="assets/pages/scripts/ui-confirmations.min.js" type="text/javascript"></script>
+    <script src="assets/pages/scripts/ui-extended-modals.min.js" type="text/javascript"></script>
+    <script src="assets/pages/scripts/ui-modals.min.js" type="text/javascript"></script>
+    <script src="assets/pages/scripts/components-color-pickers.min.js" type="text/javascript"></script>
+    <script src="assets/pages/scripts/ui-tree.min.js" type="text/javascript"></script>
+    <script src="assets/pages/scripts/table-datatables-responsive.js" type="text/javascript"></script>
+    <%--<script src="assets/pages/scripts/table-datatables-managed.min.js" type="text/javascript"></script>--%>
+    <script src="assets/pages/scripts/components-date-time-pickers.min.js" type="text/javascript"></script>
+    <!-- BEGIN THEME LAYOUT SCRIPTS -->
+    <script src="assets/layouts/layout/scripts/layout.min.js" type="text/javascript"></script>
+    <script src="assets/layouts/layout/scripts/demo.min.js" type="text/javascript"></script>
+    <script src="assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
+
+    <!-- END THEME LAYOUT SCRIPTS -->   
+    <script src="assets/pages/scripts/form-input-mask.js" type="text/javascript"></script>
+    <!-- Add mousewheel plugin (this is optional) -->
+    <script type="text/javascript" src="../assets/Plugins/FancyBox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="../assets/Plugins/FancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/Plugins/FancyBox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <!-- Add Button helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="../assets/Plugins/FancyBox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+    <script type="text/javascript" src="../assets/Plugins/FancyBox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <!-- Add Thumbnail helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="../assets/Plugins/FancyBox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+    <script type="text/javascript" src="../assets/Plugins/FancyBox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+    <!-- Add Media helper (this is optional) -->
+    <script type="text/javascript" src="../assets/Plugins/FancyBox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+    <script type="text/javascript">
+        //Select All Checkbox
+        var _0xf4bc = ["\x69\x66\x43\x68\x61\x6E\x67\x65\x64", "\x63\x68\x65\x63\x6B\x65\x64", "\x70\x72\x6F\x70", "\x74\x61\x62\x6C\x65\x20\x74\x64\x20\x69\x6E\x70\x75\x74\x3A\x63\x68\x65\x63\x6B\x62\x6F\x78", "\x66\x69\x6E\x64", "\x6E\x65\x78\x74", "\x70\x61\x72\x65\x6E\x74", "\x61\x64\x64\x43\x6C\x61\x73\x73", "\x72\x65\x6D\x6F\x76\x65\x43\x6C\x61\x73\x73", "\x6F\x6E", "\x69\x6E\x70\x75\x74\x2E\x69\x63\x68\x65\x63\x6B"]; jQuery(_0xf4bc[10])[_0xf4bc[9]](_0xf4bc[0], function (_0xa70ex1) { $(this)[_0xf4bc[6]]()[_0xf4bc[6]]()[_0xf4bc[6]]()[_0xf4bc[5]]()[_0xf4bc[5]]()[_0xf4bc[4]](_0xf4bc[3])[_0xf4bc[2]](_0xf4bc[1], $(this)[_0xf4bc[2]](_0xf4bc[1])); if ($(this)[_0xf4bc[2]](_0xf4bc[1])) { $(this)[_0xf4bc[6]]()[_0xf4bc[6]]()[_0xf4bc[6]]()[_0xf4bc[5]]()[_0xf4bc[5]]()[_0xf4bc[4]](_0xf4bc[3])[_0xf4bc[6]]()[_0xf4bc[7]](_0xf4bc[1]) } else { $(this)[_0xf4bc[6]]()[_0xf4bc[6]]()[_0xf4bc[6]]()[_0xf4bc[5]]()[_0xf4bc[5]]()[_0xf4bc[4]](_0xf4bc[3])[_0xf4bc[6]]()[_0xf4bc[8]](_0xf4bc[1]) } })
+
+        //Select All Checkbox Table
+        var _0xf576 = ["\x63\x68\x65\x63\x6B\x65\x64", "\x70\x72\x6F\x70", "\x74\x64\x20\x69\x6E\x70\x75\x74\x3A\x63\x68\x65\x63\x6B\x62\x6F\x78", "\x66\x69\x6E\x64", "\x6E\x65\x78\x74", "\x70\x61\x72\x65\x6E\x74", "\x61\x64\x64\x43\x6C\x61\x73\x73", "\x72\x65\x6D\x6F\x76\x65\x43\x6C\x61\x73\x73", "\x63\x6C\x69\x63\x6B", "\x2E\x74\x61\x62\x6C\x65\x20\x74\x68\x20\x69\x6E\x70\x75\x74\x3A\x63\x68\x65\x63\x6B\x62\x6F\x78", "\x72\x65\x61\x64\x79"]; $(document)[_0xf576[10]](function () { $(_0xf576[9])[_0xf576[8]](function (_0xeedbx1) { $(this)[_0xf576[5]]()[_0xf576[5]]()[_0xf576[5]]()[_0xf576[5]]()[_0xf576[5]]()[_0xf576[4]]()[_0xf576[3]](_0xf576[2])[_0xf576[1]](_0xf576[0], this[_0xf576[0]]); if ($(this)[_0xf576[1]](_0xf576[0])) { $(this)[_0xf576[5]]()[_0xf576[5]]()[_0xf576[5]]()[_0xf576[5]]()[_0xf576[5]]()[_0xf576[4]]()[_0xf576[3]](_0xf576[2])[_0xf576[5]]()[_0xf576[6]](_0xf576[0]) } else { $(this)[_0xf576[5]]()[_0xf576[5]]()[_0xf576[5]]()[_0xf576[5]]()[_0xf576[5]]()[_0xf576[4]]()[_0xf576[3]](_0xf576[2])[_0xf576[5]]()[_0xf576[7]](_0xf576[0]) } }) })
+    </script>
+</body>
+</html>
