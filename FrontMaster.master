@@ -40,6 +40,7 @@
     <script type='text/javascript' src='assets/wp-content/themes/museumwp/js/libca80.js?ver=4.9.15'></script>
     <script type='text/javascript' src='assets/wp-content/themes/museumwp/js/functionsca80.js?ver=4.9.15'></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/Custom/CustomWar.js"></script>
 </head>
 <body class="home page-template-default page page-id-209 woocommerce-no-js tribe-no-js front-page wpb-js-composer js-comp-ver-5.5.2 vc_responsive">
     <form id="form1" runat="server">
@@ -54,31 +55,14 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="logo image-logo" href="#">
-                                <div class="gradient-box">
-                                    Porirua War Stories
-                                </div>
+                            <a class="logo image-logo" href="#">Porirua War Stories</a>
                         </div>
                         <div class="navbar-collapse collapse pull-right">
                             <ul id="menu-main-menu" class="nav navbar-nav">
                                 <li runat="server" id="lihm" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-250"><a title="Home" href="Default.aspx">Home</a></li>
                                 <li runat="server" id="liau" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-250"><a title="Gallery" href="AboutUs.aspx">About Us</a></li>
                                 <li runat="server" id="liwr" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-242 dropdown"><a title="Pages" href="Wars.aspx" class="dropdown-toggle" aria-haspopup="true">War Stories <span class="caret"></span></a><i class="ddl-switch fa fa-angle-down"></i>
-                                    <ul role="menu" class=" dropdown-menu">
-                                        <li id="menu-item-328" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-328 dropdown"><a title="Shop" href="WarDetails.aspx">Boer War</a><i class="ddl-switch fa fa-angle-down"></i>
-
-                                        </li>
-                                        <li id="Li1" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-328 dropdown"><a title="Shop" href="WarDetails.aspxl">WW1</a><i class="ddl-switch fa fa-angle-down"></i>
-
-                                        </li>
-                                        <li id="Li2" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-328 dropdown"><a title="Shop" href="WarDetails.aspx">WW2</a><i class="ddl-switch fa fa-angle-down"></i>
-
-                                        </li>
-                                        <li id="Li3" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-328 dropdown"><a title="Shop" href="WarDetails.aspx">Nelson & Others</a><i class="ddl-switch fa fa-angle-down"></i>
-
-                                        </li>
-
-                                    </ul>
+                                    <ul id="lblwarlistmenu" role='menu' class=' dropdown-menu'></ul>
                                 </li>
                                 <li runat="server" id="licu" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-253"><a title="Contact Us" href="ContactUs.aspx">Contact Us</a></li>
                             </ul>
@@ -91,7 +75,8 @@
             <div id="main" class="site-main" role="main">
                 <div data-stellar-background-ratio="0.3" class="page-header full-page-header" style="background-image: url(assets/wp-content/uploads/2015/12/bnr-bg.jpg); background-position: 50% 2.1px;">
                     <div class="overlay-gr">
-                        <h1 class="page-title"><asp:Label runat="server" ID="PageTitle"></asp:Label></h1>
+                        <h1 class="page-title">
+                            <asp:Label runat="server" ID="PageTitle"></asp:Label></h1>
                     </div>
                 </div>
                 <asp:ContentPlaceHolder ID="ContentBody" runat="server"></asp:ContentPlaceHolder>
@@ -104,19 +89,19 @@
                         <div class="under-footer">
                             <ul class="con-info col-md-8 col-sm-6">
                                 <li>
-                                    <p><i class="fa fa-map-marker"></i>Porirua</p>
+                                    <p><i class="fa fa-map-marker"></i>Porirua War Stories</p>
                                 </li>
-                                <%--<li>
-                                    <p><i class="fa fa-phone"></i>(123) 456-7890</p>
-                                </li>--%>
                                 <li>
-                                    <p><i class="fa fa-envelope"></i><a href="poriruawarstories@gmail.com">poriruawarstories@gmail.com</a></p>
+                                    <p><i class="fa fa-phone"></i>(123) 456-7890</p>
+                                </li>
+                                <li>
+                                    <p><i class="fa fa-envelope"></i><a href="mailto:mail@example.com">mail@PoriruaWarStories.com</a></p>
                                 </li>
                             </ul>
                             <ul class="social-icons col-md-4 col-sm-6">
-                                <li>
-                              <a target="_blank" href="https://www.facebook.com/poriruawarstories"> <i class="fa fa-facebook-square" style="font-size:20px;"></i></a>
-                               </li>
+                                 <li>
+                               <a target="_blank" href="https://www.facebook.com/poriruawarstories"> <i class="fa fa-facebook-square" style="font-size:20px;"></i></a>
+                                </li>
                             </ul>
                         </div>
 
